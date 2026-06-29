@@ -1,11 +1,6 @@
 # BlueStamp Rocket Flight Test and Data Logger
 When you build a model rocket, with expensive components and hours of work, you want to have a sense of confidence before the launch, that is the purpose of my project. Some challenges I faced when building the rocket flight test and data logger were the wiring as well as the 3d design. I don't have much experience with doing wiring work nor 3d CAD so both of these tasks were challenging. My takeaway from this project is that anything is possible with enough time and effort put into it.
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -69,14 +64,20 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
+int motorpin1 = 2;
+int motorpin2 = 3;
+
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+  pinMode(motorpin1, OUTPUT);
+  
+  pinMode(motorpin2, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  analogWrite(motorpin1, 0);
+  analogWrite(motorpin2, 255);
 
 }
 ```
