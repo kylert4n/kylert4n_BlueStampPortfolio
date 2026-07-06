@@ -41,6 +41,44 @@ void loop() {
 
 }
 ```
+```python
+import tkinter as tk
+import serial
+import time
+
+arduino = serial.Serial('COM3', 9600)
+
+time.sleep(2)
+
+def send(command):
+  arduijno.write(command.encode())
+
+window = tk.Tk()
+window.title("Motor Controller")
+window.geometry("300x250")
+
+forward = tk.button(window, text="Forward"
+                    command=lambda: send("F"),
+                    windth=20,height=2)
+
+reverse = tk.Button(window,text="Reverse"
+                    command=lambda: send("B")
+                    windth=20,height=2)
+
+stop = tk.button(window,text="STOP",
+                 command=lambda: send("S")
+                 width=20,height=2)
+
+forward.pack(pady=10)
+reverse.pack(pady=10)
+stop.pack(pady=10)
+
+window.bind("<w>",lambda e: send("F"))
+window.bind("<S>",lambda e: send("B"))
+window.bind("<space>",lambda e: send("S"))
+
+window.mainloop(
+```
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
