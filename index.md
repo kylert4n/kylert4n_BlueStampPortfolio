@@ -210,8 +210,8 @@ window.bind("<space>",lambda e: send("S"))
 
 window.mainloop(
 ```
-This was the second attempt at making a window that displays button
-'''
+This was the second attempt at making a window that displays button. I tried to work on the asthetics of the window which in my opinion looks great
+```
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
 import threading
@@ -425,7 +425,7 @@ if __name__ == '__main__':
     root = tk.Tk()
     app = SerialGUI(root)
     root.mainloop()
-'''
+```
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
@@ -433,7 +433,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Elagoo Arduino Uno | Program Motor | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 
