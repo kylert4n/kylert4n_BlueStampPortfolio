@@ -21,7 +21,7 @@ My starter milestone is a retro gaming handheld. I built it by soldering on mult
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
 # Code
-
+This was the first attempt at getting a response from the motor which was succesful
 ```c++
 int motorpin1 = 2;
 int motorpin2 = 3;
@@ -40,7 +40,138 @@ void loop() {
 
 }
 ```
-This was the first attempt at making a window that displays buttons
+This was the first attempt at getting proper perameters set for the motor
+```c++
+const int ENA = 9;   // Speed (PWM)
+const int IN1 = 8;   // Direction
+const int IN2 = 7;
+
+void setup() {
+  pinMode(ENA, OUTPUT);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+
+  if (Serial.available()) {
+
+    char command = Serial.read();
+
+    if (command == 'F') {
+      digitalWrite(IN1, HIGH);
+      digitalWrite(IN2, LOW);
+      analogWrite(ENA, 200);
+    }
+
+    else if (command == 'B') {
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, HIGH);
+      analogWrite(ENA, 200);
+    }
+
+    else if (command == 'S') {
+      analogWrite(ENA, 0);
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, LOW);
+    }
+  }
+  
+}
+```
+This was where I tried to get the arduino to communicate with my laptop which was an important break through for this project and is crucial for the operation of this project
+```c++
+void setup() {
+  Serial.begin(9600);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    char c = Serial.read();
+    if (c == 'F') {
+      Serial.println("Forward received");
+      digitalWrite(LED_BUILTIN, HIGH);
+    } else if (c == 'B') {
+      Serial.println("Reverse received");
+      digitalWrite(LED_BUILTIN, LOW);
+    } else if (c == 'S') {
+      Serial.println("Stop received");
+    } else {
+      Serial.print("Unknown: ");
+      Serial.println(c);
+    }
+  }
+}
+```
+This was the final iteration of the code which combines the perameters of the first iteration and the communication of the second.
+```c++
+// Bluetooth motor control sketch
+// Commands over Serial/Bluetooth:
+//   F = forward
+//   B = reverse
+//   S = stop
+//
+// This example assumes an L298N-style driver:
+//   IN1 -> Arduino pin 8
+//   IN2 -> Arduino pin 9
+//   ENA -> Arduino pin 10 (PWM)
+//
+// Wiring note:
+//   - Connect motor driver logic pins to these Arduino pins.
+//   - Connect driver GND to Arduino GND.
+//   - If using a separate motor power supply, connect its GND to Arduino GND.
+
+const int IN1 = 8;
+const int IN2 = 9;
+const int ENA = 10;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(ENA, OUTPUT);
+
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  analogWrite(ENA, 0);
+
+  Serial.println("Bluetooth motor controller ready");
+  Serial.println("Send F, B, or S");
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    char c = Serial.read();
+
+    if (c == 'F' || c == 'f') {
+      Serial.println("Forward");
+      digitalWrite(IN1, HIGH);
+      digitalWrite(IN2, LOW);
+      analogWrite(ENA, 200);  // 0-255 speed
+    }
+    else if (c == 'B' || c == 'b') {
+      Serial.println("Reverse");
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, HIGH);
+      analogWrite(ENA, 200);
+    }
+    else if (c == 'S' || c == 's') {
+      Serial.println("Stop");
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, LOW);
+      analogWrite(ENA, 0);
+    }
+    else {
+      Serial.print("Unknown command: ");
+      Serial.println(c);
+    }
+  }
+}
+```
+This was the first attempt at making a window that displays buttons which will be the main control panel
 ```python
 import tkinter as tk
 import serial
