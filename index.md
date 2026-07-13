@@ -12,7 +12,10 @@ When you build a model rocket, with expensive components and hours of work, you 
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=EeG8BlkBPNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
+Accomplishments - 
+- What your biggest challenges and triumphs were at BSE
+- A summary of key topics you learned about
+- What you hope to learn in the future after everything you've learned at BSE
 
   # Starter Milestone
 
