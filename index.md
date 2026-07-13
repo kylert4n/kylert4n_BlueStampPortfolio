@@ -12,14 +12,27 @@ When you build a model rocket, with expensive components and hours of work, you 
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PKH9MHMPW6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+Details - 
+- Technical details of what you've accomplished and how they contribute to the final goal
+Progress - 
+- What has been surprising about the project so far
+Challenges - 
+- Previous challenges you faced that you overcame
+Next Steps
+- What needs to be completed before your final milestone 
+
+
   # First Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=EeG8BlkBPNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+Details - My project is comprised of a large wooden base, 2 1x4 wood planks, 4 L brackets, 16 screws, 5 AA battery holder, small breadboard,             Elegoo Arduino Uno R3, L298N motor driver, BO gear motor, HC-05 Bluetooth chip, 5 AA batteries, 1k resistor, 2k resistor, and jumper           cables
+
+Progress - So far, I've finished the frame as in the wooden components as well as the 3d printed ones
+
+Challenges - A couple of challenges I faced durin the assembly of the frame were both during the design and the assembly phases of my project.              During the design phase, on my first attempt, I had made the holes where the rods for the gyroscope sit way to shallow so they                 were prone to slipping out. On my second redesign I had forgotten to account for tolerance, so the two shells didn't end up                    clamping together correctly. On my third attempt I had the shells printed in a rough filament which didn't allow the rods to spin              smoothly so on my final attempt I printed it in a smoother filament.
+
+Next Steps - My plan is to finish up the electronics, then strap it to the frame which will be my second milestone
 
   # Starter Milestone
 
