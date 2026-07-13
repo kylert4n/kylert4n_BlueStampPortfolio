@@ -210,7 +210,7 @@ window.bind("<space>",lambda e: send("S"))
 
 window.mainloop(
 ```
-This was the second attempt at making a window that displays button. I tried to work on the asthetics of the window which in my opinion looks great
+This was the second attempt at making a window that displays button. I tried to work on the asthetics of the window which in my opinion looks great.
 ```
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
@@ -226,7 +226,7 @@ class SerialGUI:
         self.root = root
         root.title("Rocket Controller — Bluetooth")
         root.attributes('-fullscreen', True)
-        root.configure(bg='black')
+        root.configure(bg='#0f0f0f')
         root.resizable(False, False)
         # Escape to exit fullscreen
         root.bind('<Escape>', lambda e: self._exit_fullscreen())
@@ -236,9 +236,31 @@ class SerialGUI:
         self.read_q = queue.Queue()
         self.stop_event = threading.Event()
 
+        self.bg_canvas = tk.Canvas(self.root, bg='#0f0f0f', highlightthickness=0)
+        self.bg_canvas.place(x=0, y=0, relwidth=1, relheight=1)
+        self.root.bind('<Configure>', lambda e: self._draw_grid())
+        self.root.after(50, self._draw_grid)
+
         self._build_ui()
         self._poll_serial()
-        self.analog.write_core _//plssrq()("writebackground", "black"))
+
+    def _draw_grid(self):
+        self.bg_canvas.delete('all')
+        width = max(1, self.root.winfo_width())
+        height = max(1, self.root.winfo_height())
+        spacing = 96
+        color = '#2a2a2a'
+        frame_color = '#4d4d4d'
+
+        for x in range(0, width + 1, spacing):
+            self.bg_canvas.create_line(x, 0, x, height, fill=color, width=1)
+        for y in range(0, height + 1, spacing):
+            self.bg_canvas.create_line(0, y, width, y, fill=color, width=1)
+
+        pad_x = 140
+        pad_y = 120
+        self.bg_canvas.create_rectangle(pad_x, pad_y, width - pad_x, height - pad_y, outline=frame_color, width=2)
+        self.bg_canvas.create_rectangle(pad_x + 24, pad_y + 24, width - pad_x - 24, height - pad_y - 24, outline=frame_color, width=1)
 
     def _build_ui(self):
         # configure ttk styles for dark theme
@@ -247,60 +269,47 @@ class SerialGUI:
             style.theme_use('clam')
         except Exception:
             pass
-        style.configure('TFrame', background='black')
-        style.configure('TLabel', background='black', foreground='white')
-        style.configure('TButton', background='#222222', foreground='white')
-        style.configure('TCombobox', fieldbackground='#222222', background='#222222', foreground='white')
-
-        frm_top = ttk.Frame(self.root, padding=10, style='TFrame')
-        frm_top.pack(fill="x")
-
-        ttk.Label(frm_top, text="Port:").grid(row=0, column=0, sticky="w")
-        self.port_var = tk.StringVar()
-        self.port_combo = ttk.Combobox(frm_top, textvariable=self.port_var, width=18, state="readonly")
-        self.port_combo['values'] = self._available_ports()
-        self.port_combo.grid(row=0, column=1, padx=6)
-
-        ttk.Button(frm_top, text="Refresh", command=self._refresh_ports).grid(row=0, column=2)
-
-        ttk.Label(frm_top, text="Baud:").grid(row=0, column=3, sticky="w", padx=(12,0))
-        self.baud_var = tk.StringVar(value="9600")
-        ttk.Entry(frm_top, textvariable=self.baud_var, width=8).grid(row=0, column=4)
-
-        self.connect_btn = ttk.Button(frm_top, text="Connect", command=self.toggle_connect)
-        self.connect_btn.grid(row=0, column=5, padx=(12,0))
+        style.configure('TFrame', background='#0f0f0f')
+        style.configure('TLabel', background='#0f0f0f', foreground='#f2f2f2')
+        style.configure('TButton', background='#2a2a2a', foreground='#f2f2f2', font=('Segoe UI', 11, 'bold'))
+        style.configure('TCombobox', fieldbackground='#161616', background='#2a2a2a', foreground='#f2f2f2')
+        style.configure('TEntry', fieldbackground='#161616', foreground='#f2f2f2')
 
         self.status_var = tk.StringVar(value="Disconnected")
-        ttk.Label(self.root, textvariable=self.status_var, foreground="lightblue", background='black').pack(anchor="w", padx=12)
+        ttk.Label(self.root, textvariable=self.status_var, foreground='#d9d9d9', background='#0f0f0f').pack(anchor="w", padx=12)
 
         # top area with three large colored buttons (upper half)
-        top_area = tk.Frame(self.root, bg='black')
+        top_area = tk.Frame(self.root, bg='#0f0f0f')
         top_area.pack(fill='both', expand=True)
 
-        center_frame = tk.Frame(top_area, bg='black')
+        title_label = tk.Label(top_area, text='Controls', bg='#0f0f0f', fg='#f2f2f2', font=('Segoe UI', 30, 'bold'))
+        title_label.pack(pady=(24, 10))
+
+        center_frame = tk.Frame(top_area, bg='#0f0f0f')
         center_frame.place(relx=0.5, rely=0.25, anchor='n')
 
-        btn_font = ("Segoe UI", 32, "bold")
-        self.forward_btn = tk.Button(center_frame, text="Forward\n(F)", command=lambda: self.send_cmd('F'), bg='#28A745', fg='white', activebackground='#1f7a34', font=btn_font, width=10, height=2)
-        self.forward_btn.grid(row=0, column=0, padx=18, pady=8)
+        btn_font = ("Segoe UI", 30, "bold")
+        self.forward_btn = tk.Button(center_frame, text="Forward\n(F)", command=lambda: self.send_cmd('F'), bg='#1f1f1f', fg='#f2f2f2', activebackground='#3a3a3a', font=btn_font, width=14, height=3, relief='raised', bd=3)
+        self.forward_btn.grid(row=0, column=0, padx=20, pady=10)
 
-        self.reverse_btn = tk.Button(center_frame, text="Reverse\n(B)", command=lambda: self.send_cmd('B'), bg='#FFC107', fg='black', activebackground='#d19b05', font=btn_font, width=10, height=2)
-        self.reverse_btn.grid(row=0, column=1, padx=18, pady=8)
+        self.reverse_btn = tk.Button(center_frame, text="Reverse\n(B)", command=lambda: self.send_cmd('B'), bg='#2b2b2b', fg='#f2f2f2', activebackground='#4a4a4a', font=btn_font, width=14, height=3, relief='raised', bd=3)
+        self.reverse_btn.grid(row=0, column=1, padx=20, pady=10)
 
-        self.stop_btn = tk.Button(center_frame, text="Stop\n(S)", command=lambda: self.send_cmd('S'), bg='#DC3545', fg='white', activebackground='#b42432', font=btn_font, width=10, height=2)
+        self.stop_btn = tk.Button(center_frame, text="Stop\n(S)", command=lambda: self.send_cmd('S'), bg='#3b3b3b', fg='#f2f2f2', activebackground='#5a5a5a', font=btn_font, width=14, height=3, relief='raised', bd=3)
         self.stop_btn.grid(row=0, column=2, padx=18, pady=8)
 
         # small log area just above bottom controls
-        self.log = scrolledtext.ScrolledText(self.root, height=6, state='disabled', wrap='word', bg='black', fg='white', insertbackground='white')
+        self.log = scrolledtext.ScrolledText(self.root, height=6, state='disabled', wrap='word', bg='#161616', fg='#e6e6e6', insertbackground='#e6e6e6')
         self.log.pack(fill='x', padx=12, pady=(0,6))
 
         # bottom controls centered
-        bottom_frame = tk.Frame(self.root, bg='black')
+        bottom_frame = tk.Frame(self.root, bg='#0f0f0f')
         bottom_frame.pack(side='bottom', fill='x', pady=24)
 
-        controls = tk.Frame(bottom_frame, bg='black')
-        controls.place(relx=0.5, rely=0.5, anchor='s')
+        controls = tk.Frame(bottom_frame, bg='#0f0f0f')
+        controls.pack(anchor='center')
 
+        self.port_var = tk.StringVar()
         ttk.Label(controls, text="Port:", style='TLabel').grid(row=0, column=0, sticky='e', padx=(0,6))
         self.port_combo = ttk.Combobox(controls, textvariable=self.port_var, width=18, state="readonly")
         self.port_combo['values'] = self._available_ports()
@@ -308,11 +317,8 @@ class SerialGUI:
 
         ttk.Button(controls, text="Refresh", command=self._refresh_ports).grid(row=0, column=2, padx=(0,12))
 
-        ttk.Label(controls, text="Baud:", style='TLabel').grid(row=0, column=3, sticky='e', padx=(0,6))
-        ttk.Entry(controls, textvariable=self.baud_var, width=8).grid(row=0, column=4)
-
         self.connect_btn = ttk.Button(controls, text="Connect", command=self.toggle_connect)
-        self.connect_btn.grid(row=0, column=5, padx=(12,0))
+        self.connect_btn.grid(row=0, column=3, padx=(12,0))
 
         # key bindings
         self.root.bind('<f>', lambda e: self.send_cmd('F'))
@@ -350,7 +356,7 @@ class SerialGUI:
         if not port:
             messagebox.showwarning("No port", "No serial ports found. Connect your HC-05 and hit Refresh.")
             return
-        baud = int(self.baud_var.get())
+        baud = 9600
         try:
             self.serial = serial.Serial(port, baud, timeout=0.5, writeTimeout=0.5)
             self.status_var.set(f"Connected {port}@{baud}")
@@ -425,6 +431,7 @@ if __name__ == '__main__':
     root = tk.Tk()
     app = SerialGUI(root)
     root.mainloop()
+
 ```
 
 # Bill of Materials
