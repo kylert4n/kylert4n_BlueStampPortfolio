@@ -6,7 +6,7 @@ When you build a model rocket, with expensive components and hours of work, you 
 |:--:|:--:|:--:|:--:|
 | Kyler T | Monta Vista High School | Aerospace Engineering | Incoming Sophmore 
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
+![Headshot](/branding/KylerT.png)
 
   # Starter Milestone
 
