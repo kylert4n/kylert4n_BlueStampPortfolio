@@ -466,9 +466,19 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Elagoo Arduino Uno | Program Motor | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Elagoo Arduino Uno | Program Motor | $16.99 | <a href="https://amzn.to/4vxjrlB"> Link </a> |
+| L298N Motor Driver | Control Motor | $4.99 | <a href="https://amzn.to/4fnQbYC"> Link </a> |
+| Small Breadboard | Allow you to wire up bluetooth controller | $6.99 | <a href="https://amzn.to/4yB9wye"> Link </a> |
+| Hc-05 Bluetooth Module | Allow you to control motor through device | $9.99 | <a href="https://amzn.to/44tP0Sm"> Link </a> |
+| Male to Male Jumper Cables | Wire Circutery | $3.99 | <a href="https://tinyurl.com/4s3233e7"> Link </a> |
+| Male to Female Jumper Cables | Wire Circutery | $3.99 | <a href="https://tinyurl.com/4kjvuzkk"> Link </a> |
+| 5 AA Battery Holder | Provide Power to Circut | $3.95 | <a href="https://tinyurl.com/4funwr9z"> Link </a> |
+| Gear Motor | Drive Gears on Gyroscope | $6.89 | <a href="https://tinyurl.com/2p9shaxn"> Link </a> |
+| L Brackets | Hold up Wood Planks | $6.99 | <a href="https://tinyurl.com/47z2rzwa"> Link </a> |
+| Wood Base | Secure Entire Project | $21.59 | <a href="https://tinyurl.com/2p9t392b"> Link </a> |
+| Wood Planks | Hold up Entire Project | $11.99 | <a href="https://tinyurl.com/mtpm7kcm"> Link </a> |
+| AA Batteries | Provide Power | $12.49 | <a href="https://tinyurl.com/2p9veynu"> Link </a> |
+
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
