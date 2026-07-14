@@ -75,8 +75,6 @@ void loop() {
 }
 ```
 
------------------------------------------------------------------------------------------------------------------------------------------------
-
 This was where I tried to get the arduino to communicate with my laptop which was an important break through for this project and is crucial for the operation of this project
  - Goal is to get device to tell you that it recieves your commands
  - Open up serial monitor on "Arduino IDE"
@@ -107,8 +105,6 @@ void loop() {
   }
 }
 ```
-
------------------------------------------------------------------------------------------------------------------------------------------------
 
 This was the final iteration of the code which combines the perameters of the first iteration and the communication of the second.
  - This code combines the first part which is to get the motor spinning and make sure you did wiring correctly as well as the second part         where you make sure the arduino is properly responding to your device
@@ -179,8 +175,6 @@ void loop() {
 }
 ```
 
------------------------------------------------------------------------------------------------------------------------------------------------
-
 This was the first attempt at making a window that displays buttons which will be the main control panel
  - This is my first attempt at making a semi-presentable display to control the motor
  - You can later make your own window
@@ -225,8 +219,6 @@ window.bind("<space>",lambda e: send("S"))
 
 window.mainloop(
 ```
-
------------------------------------------------------------------------------------------------------------------------------------------------
 
 This was the second attempt at making a window that displays button. I tried to work on the asthetics of the window which in my opinion looks great.
  - I changed the asthetics of the window a little bit to my preferences but again, you can change it to what you like
