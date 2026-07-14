@@ -468,7 +468,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Wood Base | Secure Entire Project | $21.59 | <a href="https://tinyurl.com/2p9t392b"> Link </a> |
 | Wood Planks | Hold up Entire Project | $11.99 | <a href="https://tinyurl.com/mtpm7kcm"> Link </a> |
 | AA Batteries | Provide Power | $12.49 | <a href="https://tinyurl.com/2p9veynu"> Link </a> |
-| Total | $106.85 |
+| Total | Total Amount of Money for Project | $106.85 |
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
