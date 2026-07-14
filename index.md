@@ -8,6 +8,8 @@ When you build a model rocket, with expensive components and hours of work, you 
 
 ![Headshot](/branding/KylerT.png)
 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
   # Second Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PKH9MHMPW6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -41,6 +43,7 @@ Next Steps - My plan is to finish up the electronics, then strap it to the frame
 My starter milestone is a retro gaming handheld. I built it by soldering on multiple components onto a pcb. The build includes 2 LED dot matrix modules which serve as screens, electronic capaciter, Digitron display which help to show your score, button which helps you turn it on and off, PCB, screws, battery case, and acrylic shell. I've progressed my skills in soldering as well as general knowledge of circutry. Some challenges I faced during the assembly of the handheld was components falling out during soldering which I solved by heating up the solder and using tweazers and pushing out the solder. My plan to complete the project is to first solder all the components, prep the acrylic sheets, assemble shell, and test.
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 
 # Schematics 
@@ -66,6 +69,9 @@ void loop() {
 
 }
 ```
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 This was the first attempt at getting proper perameters set for the motor
 ```c++
 const int ENA = 9;   // Speed (PWM)
@@ -107,6 +113,9 @@ void loop() {
   
 }
 ```
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 This was where I tried to get the arduino to communicate with my laptop which was an important break through for this project and is crucial for the operation of this project
 ```c++
 void setup() {
@@ -132,6 +141,9 @@ void loop() {
   }
 }
 ```
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 This was the final iteration of the code which combines the perameters of the first iteration and the communication of the second.
 ```c++
 // Bluetooth motor control sketch
@@ -197,6 +209,9 @@ void loop() {
   }
 }
 ```
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 This was the first attempt at making a window that displays buttons which will be the main control panel
 ```python
 import tkinter as tk
@@ -236,6 +251,9 @@ window.bind("<space>",lambda e: send("S"))
 
 window.mainloop(
 ```
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 This was the second attempt at making a window that displays button. I tried to work on the asthetics of the window which in my opinion looks great.
 ```
 import tkinter as tk
@@ -460,6 +478,8 @@ if __name__ == '__main__':
 
 ```
 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
@@ -479,6 +499,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Wood Planks | Hold up Entire Project | $11.99 | <a href="https://tinyurl.com/mtpm7kcm"> Link </a> |
 | AA Batteries | Provide Power | $12.49 | <a href="https://tinyurl.com/2p9veynu"> Link </a> |
 
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
