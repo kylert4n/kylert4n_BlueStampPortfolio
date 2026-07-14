@@ -55,6 +55,7 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 This was the first attempt at getting a response from the motor which was succesful
  - When everything is wired up correctly, motor should spin
  - Upload this code to the arduino to test if everything is wired up correctly
+
 ```c++
 int motorpin1 = 2;
 int motorpin2 = 3;
@@ -81,6 +82,7 @@ This was where I tried to get the arduino to communicate with my laptop which wa
  - Open up serial monitor on "Arduino IDE"
  - Set baud rate to 9600
  - press 'F', 'B', or 'S' and it should print 'Forward', 'Backward', or 'Stop'
+
 ```c++
 void setup() {
   Serial.begin(9600);
@@ -111,6 +113,7 @@ void loop() {
 This was the final iteration of the code which combines the perameters of the first iteration and the communication of the second.
  - This code combines the first part which is to get the motor spinning and make sure you did wiring correctly as well as the second part         where you make sure the arduino is properly responding to your device
  - There isn't any test for this, what you do instead is you download an application called Visual Studios Code and upload the next set of        python code to it
+
 ```c++
 // Bluetooth motor control sketch
 // Commands over Serial/Bluetooth:
@@ -183,6 +186,7 @@ This was the first attempt at making a window that displays buttons which will b
  - You can later make your own window
  - Once you upload the code, enter 'python c:\Users\kyler\rocket_gui_v2.py' into the provided space below where it says 'PS                       C:\Users\YourName>' and a window should open
  - If it doesn't open, ask the AI tool on  the right for assistance
+
 ```python
 import tkinter as tk
 import serial
@@ -228,6 +232,7 @@ This was the second attempt at making a window that displays button. I tried to 
  - I changed the asthetics of the window a little bit to my preferences but again, you can change it to what you like
  - Once you open the window, you have to connect your arduino to the right COM port, for me it was COM port 12 but it might be different for      you
  - Then you should be able to control the motor, you can adjust the speed of the motor as you'd like
+
 ```Python
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
