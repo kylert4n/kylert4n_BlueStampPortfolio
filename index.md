@@ -12,7 +12,7 @@ When you build a model rocket, with expensive components and hours of work, you 
 
 # Milestones
 
-  **# Second Milestone**
+ # Second Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PKH9MHMPW6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
