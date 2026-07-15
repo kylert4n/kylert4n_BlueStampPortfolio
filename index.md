@@ -30,20 +30,25 @@ When you build a model rocket, with expensive components and hours of work, you 
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=EeG8BlkBPNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Details - My project is comprised of a large wooden base, 2 1x4 wood planks, 4 L brackets, 16 screws, 5 AA battery holder, small breadboard,             Elegoo Arduino Uno R3, L298N motor driver, BO gear motor, HC-05 Bluetooth chip, 5 AA batteries, 1k resistor, 2k resistor, and jumper           cables.
+**Details** - My project is comprised of a large wooden base, two 1x4 wood planks, four L brackets, 16 screws, 5 AA battery holder, small                              breadboard, Elegoo Arduino Uno R3, L298N motor driver, BO gear motor, HC-05 Bluetooth chip, five AA batteries, 1k resistor, 2k                           resistor, and jumper cables.
 
-Progress - So far, I've finished the frame as in the wooden components as well as the 3d printed ones.
+**Progress** - So far, I've finished the frame as in the wooden components as well as the 3d printed ones.
 
-Challenges - A couple of challenges I faced durin the assembly of the frame were both during the design and the assembly phases of my project.              During the design phase, on my first attempt, I had made the holes where the rods for the gyroscope sit way to shallow so they                 were prone to slipping out. On my second redesign I had forgotten to account for tolerance, so the two shells didn't end up                    clamping together correctly. On my third attempt I had the shells printed in a rough filament which didn't allow the rods to spin              smoothly so on my final attempt I printed it in a smoother filament.
+**Challenges** - A couple of challenges I faced durin the assembly of the frame were both during the design and the assembly phases of my project.                        During the design phase, on my first attempt, I had made the holes where the rods for the gyroscope sit way to shallow so they                           were prone to slipping out. On my second redesign I had forgotten to account for tolerance, so the two shells didn't end up                              clamping together correctly. On my third attempt I had the shells printed in a rough filament which didn't allow the rods to spin                        smoothly so on my final attempt I printed it in a smoother filament.
 
-Next Steps - My plan is to finish up the electronics, then strap it to the frame which will be my second milestone.
+**Next Steps** - My plan is to finish up the electronics, then strap it to the frame which will be my second milestone.
 
   # Starter Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mfC3FOmEetY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-My starter milestone is a retro gaming handheld. I built it by soldering on multiple components onto a pcb. The build includes 2 LED dot matrix modules which serve as screens, electronic capaciter, Digitron display which help to show your score, button which helps you turn it on and off, PCB, screws, battery case, and acrylic shell. I've progressed my skills in soldering as well as general knowledge of circutry. Some challenges I faced during the assembly of the handheld was components falling out during soldering which I solved by heating up the solder and using tweazers and pushing out the solder. My plan to complete the project is to first solder all the components, prep the acrylic sheets, assemble shell, and test.
+**Details** - For my starter project I decided to make the retro arcade handheld. It requires one pcb, four screws, three AA batteries, 3 AA                 battery holder, two digital matrix screens, one 3 digit number display, six buttons, one sound module, one power button, and 6                 sheets of acrylic.
 
+**Progress** - I've finished my starter milestone which means I need to start making a build plan as well as a parts list so I can actually                   start on my intensive project
+
+**Challenges** - During the soldering of my project, the power button became loose and fell out of it's place meaning that I had solder stuck                   where it wasn't supposed to be meaning I had to learn how to remove solder which was sort of difficult because it wasn't                       100% affective but it got the job done
+
+**Next Steps** - My next step is to make the build plan as well as the parts list so that I actually start on my summer intensive project
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
