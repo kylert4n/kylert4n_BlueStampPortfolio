@@ -472,23 +472,21 @@ if __name__ == '__main__':
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 # Bill of Materials 💲
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Elagoo Arduino Uno | Program Motor | $16.99 | <a href="https://amzn.to/4vxjrlB"> Link </a> |
-| L298N Motor Driver | Control Motor | $4.99 | <a href="https://amzn.to/4fnQbYC"> Link </a> |
-| Small Breadboard | Allow you to wire up bluetooth controller | $6.99 | <a href="https://amzn.to/4yB9wye"> Link </a> |
-| Hc-05 Bluetooth Module | Allow you to control motor through device | $9.99 | <a href="https://amzn.to/44tP0Sm"> Link </a> |
-| Male to Male Jumper Cables | Wire Circutery | $3.99 | <a href="https://tinyurl.com/4s3233e7"> Link </a> |
-| Male to Female Jumper Cables | Wire Circutery | $3.99 | <a href="https://tinyurl.com/4kjvuzkk"> Link </a> |
-| 5 AA Battery Holder | Provide Power to Circut | $3.95 | <a href="https://tinyurl.com/4funwr9z"> Link </a> |
-| Gear Motor | Drive Gears on Gyroscope | $6.89 | <a href="https://tinyurl.com/2p9shaxn"> Link </a> |
-| L Brackets | Hold up Wood Planks | $6.99 | <a href="https://tinyurl.com/47z2rzwa"> Link </a> |
-| Wood Base | Secure Entire Project | $21.59 | <a href="https://tinyurl.com/2p9t392b"> Link </a> |
-| Wood Planks | Hold up Entire Project | $11.99 | <a href="https://tinyurl.com/mtpm7kcm"> Link </a> |
-| AA Batteries | Provide Power | $12.49 | <a href="https://tinyurl.com/2p9veynu"> Link </a> |
+| Elagoo Arduino Uno 💻 | Program Motor | $16.99 | <a href="https://amzn.to/4vxjrlB"> Link </a> |
+| L298N Motor Driver 🏎️ | Control Motor | $4.99 | <a href="https://amzn.to/4fnQbYC"> Link </a> |
+| Small Breadboard 🥖 | Allow you to wire up bluetooth controller | $6.99 | <a href="https://amzn.to/4yB9wye"> Link </a> |
+| Hc-05 Bluetooth Module 🛜 | Allow you to control motor through device | $9.99 | <a href="https://amzn.to/44tP0Sm"> Link </a> |
+| Male to Male Jumper Cables 👨 | Wire Circutery | $3.99 | <a href="https://tinyurl.com/4s3233e7"> Link </a> |
+| Male to Female Jumper Cables 👩 | Wire Circutery | $3.99 | <a href="https://tinyurl.com/4kjvuzkk"> Link </a> |
+| 5 AA Battery Holder 🔋 | Provide Power to Circut | $3.95 | <a href="https://tinyurl.com/4funwr9z"> Link </a> |
+| Gear Motor 🚗 | Drive Gears on Gyroscope | $6.89 | <a href="https://tinyurl.com/2p9shaxn"> Link </a> |
+| L Brackets 🏗️ | Hold up Wood Planks | $6.99 | <a href="https://tinyurl.com/47z2rzwa"> Link </a> |
+| Wood Base 🪵 | Secure Entire Project | $21.59 | <a href="https://tinyurl.com/2p9t392b"> Link </a> |
+| Wood Planks 💪 | Hold up Entire Project | $11.99 | <a href="https://tinyurl.com/mtpm7kcm"> Link </a> |
+| AA Batteries 🪫 | Provide Power | $12.49 | <a href="https://tinyurl.com/2p9veynu"> Link </a> |
 | **Total** | Total Amount of Money for Project | $106.85 |
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
