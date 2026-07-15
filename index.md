@@ -2,9 +2,9 @@
 
 When you send a rocket full of expensive components you want it to work the first time, that's where my project comes in. The purpose the rocket flight test is to validate the engineer's design while the data logger captures the exact physical readings to quantify the performance from the test. Together, the entire system is supposed to verify theoretical models to be actual models, and provide important post test info. Real full sized rocket flight testers are orders of magnitude larger than my project but the point of my project isn't to create a 1 to 1 replica of an actual rocket flight tester, it's rather a way to develop the fundamentals required for work in the same field later. Knowledge such as flight telemetery readings as well as identification of different axis are beneficial to have when going into aerospace engineering. Some of my biggest challenges include tolerances and load bearing which are both important factors in the field. Some of my biggest triumphs include getting software to work as well as finding success after long trouble shooting sessions which is present in almost any field of engineering. All in all, my project isn't just a rocket flight test and data logger, it's also a way to develop the skills required to thrive in the field of engineering.
 
-| **Engineer** | **School** | **Area of Interest** | **Grade** |
+| **Engineer👷** | **School🏫** | **Area of Interest📍** | **Grade🔢** |
 |:--:|:--:|:--:|:--:|
-| Kyler T | Monta Vista High School | Aerospace Engineering | Incoming Sophmore 
+| Kyler T | Monta Vista High School | Aerospace Engineering | Incoming Sophmore |
 
 ![Headshot](KylerT.png)
 
