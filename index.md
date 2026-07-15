@@ -6,7 +6,7 @@ When you build a model rocket, with expensive components and hours of work, you 
 |:--:|:--:|:--:|:--:|
 | Kyler T | Monta Vista High School | Aerospace Engineering | Incoming Sophmore 
 
-![Headshot](/branding/KylerT.png)
+![Headshot](KylerT.png)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
