@@ -1,4 +1,5 @@
-# BlueStamp Rocket Flight Test and Data Logger
+# BlueStamp Rocket Flight Test and Data Logger 🚀
+
 When you build a model rocket, with expensive components and hours of work, you want to have a sense of confidence before the launch, that is the purpose of my project. Some challenges I faced when building the rocket flight test and data logger were the wiring as well as the 3d design. I don't have much experience with doing wiring work nor 3d CAD so both of these tasks were challenging. My takeaway from this project is that anything is possible with enough time and effort put into it.
 
 
