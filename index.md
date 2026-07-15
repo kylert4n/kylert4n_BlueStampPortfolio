@@ -30,11 +30,11 @@ When you build a model rocket, with expensive components and hours of work, you 
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=EeG8BlkBPNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Details** - My project is comprised of a large wooden base, two 1x4 wood planks, four L brackets, 16 screws, 5 AA battery holder, small                              breadboard, Elegoo Arduino Uno R3, L298N motor driver, BO gear motor, HC-05 Bluetooth chip, five AA batteries, 1k resistor, 2k                           resistor, and jumper cables.
+**Details** - My project is comprised of a large wooden base, two 1x4 wood planks, four L brackets, 16 screws, 5 AA battery holder, small                    breadboard, Elegoo Arduino Uno R3, L298N motor driver, BO gear motor, HC-05 Bluetooth chip, five AA batteries, 1k resistor, 2k                 resistor, and jumper cables.
 
 **Progress** - So far, I've finished the frame as in the wooden components as well as the 3d printed ones.
 
-**Challenges** - A couple of challenges I faced durin the assembly of the frame were both during the design and the assembly phases of my project.                        During the design phase, on my first attempt, I had made the holes where the rods for the gyroscope sit way to shallow so they                           were prone to slipping out. On my second redesign I had forgotten to account for tolerance, so the two shells didn't end up                              clamping together correctly. On my third attempt I had the shells printed in a rough filament which didn't allow the rods to spin                        smoothly so on my final attempt I printed it in a smoother filament.
+**Challenges** - A couple of challenges I faced durin the assembly of the frame were both during the design and the assembly phases of my                       project. During the design phase, on my first attempt, I had made the holes where the rods for the gyroscope sit way to                        shallow so they were prone to slipping out. On my second redesign I had forgotten to account for tolerance, so the two shells                  didn't end up clamping together correctly. On my third attempt I had the shells printed in a rough filament which didn't                       allow the rods to spin smoothly so on my final attempt I printed it in a smoother filament.
 
 **Next Steps** - My plan is to finish up the electronics, then strap it to the frame which will be my second milestone.
 
@@ -59,7 +59,7 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 # Code
-This was the first attempt at getting a response from the motor which was succesful
+**This was the first attempt at getting a response from the motor which was succesful.**
  - When everything is wired up correctly, motor should spin
  - Upload this code to the arduino to test if everything is wired up correctly
 
@@ -82,7 +82,7 @@ void loop() {
 }
 ```
 
-This was where I tried to get the arduino to communicate with my laptop which was an important break through for this project and is crucial for the operation of this project
+**This was where I tried to get the arduino to communicate with my laptop which was an important break through for this project and is crucial for the operation of this project.**
  - Goal is to get device to tell you that it recieves your commands
  - Open up serial monitor on "Arduino IDE"
  - Set baud rate to 9600
@@ -113,7 +113,7 @@ void loop() {
 }
 ```
 
-This was the final iteration of the code which combines the perameters of the first iteration and the communication of the second.
+**This was the final iteration of the code which combines the perameters of the first iteration and the communication of the second.**
  - This code combines the first part which is to get the motor spinning and make sure you did wiring correctly as well as the second part         where you make sure the arduino is properly responding to your device
  - There isn't any test for this, what you do instead is you download an application called Visual Studios Code and upload the next set of        python code to it
 
@@ -182,7 +182,7 @@ void loop() {
 }
 ```
 
-This was the first attempt at making a window that displays buttons which will be the main control panel
+**This was the first attempt at making a window that displays buttons which will be the main control panel.**
  - This is my first attempt at making a semi-presentable display to control the motor
  - You can later make your own window
  - Once you upload the code, enter 'python c:\Users\kyler\rocket_gui_v2.py' into the provided space below where it says 'PS                       C:\Users\YourName>' and a window should open
@@ -227,7 +227,7 @@ window.bind("<space>",lambda e: send("S"))
 window.mainloop(
 ```
 
-This was the second attempt at making a window that displays button. I tried to work on the asthetics of the window which in my opinion looks great.
+**This was the second attempt at making a window that displays button. I tried to work on the asthetics of the window which in my opinion looks great.**
  - I changed the asthetics of the window a little bit to my preferences but again, you can change it to what you like
  - Once you open the window, you have to connect your arduino to the right COM port, for me it was COM port 12 but it might be different for      you
  - Then you should be able to control the motor, you can adjust the speed of the motor as you'd like
