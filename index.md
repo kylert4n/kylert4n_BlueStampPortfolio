@@ -16,13 +16,13 @@ When you send a rocket full of expensive components you want it to work the firs
 
   <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PKH9MHMPW6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Details** - My project has different components with their respective voltages, so I had to learn how to make a voltage divider. I also had                to learn how to wire things properly and since I had no prior experience this was a little bit challenging.
+**Details🕵️** - My project has different components with their respective voltages, so I had to learn how to make a voltage divider. I also had                to learn how to wire things properly and since I had no prior experience this was a little bit challenging.
 
-**Progress** - I was surprised about how much I learned, so far I've learned how to solder and now I know how to create a voltage divider, how                to wire things properly, how to troubleshoot things properly.
+**Progress🏁** - I was surprised about how much I learned, so far I've learned how to solder and now I know how to create a voltage divider, how                to wire things properly, how to troubleshoot things properly.
 
-**Challenges** - A challenge I overcame was the bluetooth chip, for some reason the bluetooth chip I had didn't connect to any devices                          properly so I had to install an application that forced it to connect to my laptop.
+**Challenges💪** - A challenge I overcame was the bluetooth chip, for some reason the bluetooth chip I had didn't connect to any devices                          properly so I had to install an application that forced it to connect to my laptop.
 
-**Next Steps** - My next step from here would be to add a computer that can tell my laptop the gyroscopes current orientation because I think                   being able to track that would be helpful.
+**Next Steps⏭️** - My next step from here would be to add a computer that can tell my laptop the gyroscopes current orientation because I think                   being able to track that would be helpful.
 
 
 
