@@ -10,9 +10,23 @@ When you build a model rocket, with expensive components and hours of work, you 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-# Milestones
+# Milestones 🎓
 
-  # Second Milestone
+  # Final Milestone 🐔
+
+  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PKH9MHMPW6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+**Details** - My project has different components with their respective voltages, so I had to learn how to make a voltage divider. I also had                to learn how to wire things properly and since I had no prior experience this was a little bit challenging.
+
+**Progress** - I was surprised about how much I learned, so far I've learned how to solder and now I know how to create a voltage divider, how                to wire things properly, how to troubleshoot things properly.
+
+**Challenges** - A challenge I overcame was the bluetooth chip, for some reason the bluetooth chip I had didn't connect to any devices                          properly so I had to install an application that forced it to connect to my laptop.
+
+**Next Steps** - My next step from here would be to add a computer that can tell my laptop the gyroscopes current orientation because I think                   being able to track that would be helpful.
+
+
+
+  # Second Milestone 🐤
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PKH9MHMPW6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -26,7 +40,7 @@ When you build a model rocket, with expensive components and hours of work, you 
 
 
 
-  # First Milestone
+  # First Milestone 🐣
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=EeG8BlkBPNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -38,7 +52,9 @@ When you build a model rocket, with expensive components and hours of work, you 
 
 **Next Steps** - My plan is to finish up the electronics, then strap it to the frame which will be my second milestone.
 
-  # Starter Milestone
+
+
+  # Starter Milestone 🥚
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mfC3FOmEetY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -53,12 +69,12 @@ When you build a model rocket, with expensive components and hours of work, you 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# Schematics 
+# Schematics 📝
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-# Code
+# Code 🧑‍💻
 **This was the first attempt at getting a response from the motor which was succesful.**
  - When everything is wired up correctly, motor should spin
  - Upload this code to the arduino to test if everything is wired up correctly
@@ -457,7 +473,7 @@ if __name__ == '__main__':
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-# Bill of Materials
+# Bill of Materials 💲
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
@@ -479,7 +495,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-# Other Resources/Examples
+# Other Resources/Examples 🧐
 - [Python & C++ Tutorial](https://drive.google.com/file/d/1y6tHtg-YjrS1z1dv9hwAJJ9f_WMo-Jii/view)
 - [CAD Tutorial](https://www.youtube.com/watch?v=bzePWxAdiI4)
 - [Arduino IDE Tutorial](https://www.youtube.com/watch?v=S9MLbEeDjEE)
