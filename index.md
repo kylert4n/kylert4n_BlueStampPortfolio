@@ -1,7 +1,7 @@
 # BlueStamp Rocket Flight Test and Data Logger 🚀
 When you send a rocket full of expensive components you want it to work the first time, that's where my project comes in. The purpose the rocket flight test is to validate the engineer's design while the data logger captures the exact physical readings to quantify the performance from the test. Together, the entire system is supposed to verify theoretical models to be actual models, and provide important post test info. Real full sized rocket flight testers are orders of magnitude larger than my project but the point of my project isn't to create a 1 to 1 replica of an actual rocket flight tester, it's rather a way to develop the fundamentals required for work in the same field later. Knowledge such as flight telemetery readings as well as identification of different axis are beneficial to have when going into aerospace engineering. Some of my biggest challenges include tolerances and load bearing which are both important factors in the field. Some of my biggest triumphs include getting software to work as well as finding success after long trouble shooting sessions which is present in almost any field of engineering. All in all, my project isn't just a rocket flight test and data logger, it's also a way to develop the skills required to thrive in the field of engineering.
 
-| **Engineer 👷** | **School 🏫** | **Area of Interest 📍** | **Grade 🔢** |
+| **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Kyler T | Monta Vista High School | Aerospace Engineering | Incoming Sophmore |
 
@@ -15,13 +15,13 @@ When you send a rocket full of expensive components you want it to work the firs
 
   <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PKH9MHMPW6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Details 🕵️** - My project has different components with their respective voltages, so I had to learn how to make a voltage divider. I also had to learn how to wire things properly and since I had no prior experience this was a little bit challenging.
+**Details** - My project has different components with their respective voltages, so I had to learn how to make a voltage divider. I also had to learn how to wire things properly and since I had no prior experience this was a little bit challenging.
 
-**Progress 🏁** - I was surprised about how much I learned, so far I've learned how to solder and now I know how to create a voltage divider, how to wire things properly, how to troubleshoot things properly.
+**Progress** - I was surprised about how much I learned, so far I've learned how to solder and now I know how to create a voltage divider, how to wire things properly, how to troubleshoot things properly.
 
-**Challenges 💪** - A challenge I overcame was the bluetooth chip, for some reason the bluetooth chip I had didn't connect to any devices      properly so I had to install an application that forced it to connect to my laptop.
+**Challenges** - A challenge I overcame was the bluetooth chip, for some reason the bluetooth chip I had didn't connect to any devices      properly so I had to install an application that forced it to connect to my laptop.
 
-**Next Steps ⏭️** - My next step from here would be to add a computer that can tell my laptop the gyroscopes current orientation because I think being able to track that would be helpful.
+**Next Steps** - My next step from here would be to add a computer that can tell my laptop the gyroscopes current orientation because I think being able to track that would be helpful.
 
 
 
@@ -29,13 +29,13 @@ When you send a rocket full of expensive components you want it to work the firs
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PKH9MHMPW6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Details 🕵️** - My project has different components with their respective voltages, so I had to learn how to make a voltage divider. I also had to learn how to wire things properly and since I had no prior experience this was a little bit challenging.
+**Details** - My project has different components with their respective voltages, so I had to learn how to make a voltage divider. I also had to learn how to wire things properly and since I had no prior experience this was a little bit challenging.
 
-**Progress 🏁** - I was surprised about how much I learned, so far I've learned how to solder and now I know how to create a voltage divider, how to wire things properly, how to troubleshoot things properly.
+**Progress** - I was surprised about how much I learned, so far I've learned how to solder and now I know how to create a voltage divider, how to wire things properly, how to troubleshoot things properly.
 
-**Challenges 💪** - A challenge I overcame was the bluetooth chip, for some reason the bluetooth chip I had didn't connect to any devices properly so I had to install an application that forced it to connect to my laptop.
+**Challenges** - A challenge I overcame was the bluetooth chip, for some reason the bluetooth chip I had didn't connect to any devices properly so I had to install an application that forced it to connect to my laptop.
 
-**Next Steps ⏭️** - My next step from here would be to add a computer that can tell my laptop the gyroscopes current orientation because I think being able to track that would be helpful.
+**Next Steps** - My next step from here would be to add a computer that can tell my laptop the gyroscopes current orientation because I think being able to track that would be helpful.
 
 
 
@@ -43,13 +43,13 @@ When you send a rocket full of expensive components you want it to work the firs
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=EeG8BlkBPNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Details 🕵️** - My project is comprised of a large wooden base, two 1x4 wood planks, four L brackets, 16 screws, 5 AA battery holder, small breadboard, Elegoo Arduino Uno R3, L298N motor driver, BO gear motor, HC-05 Bluetooth chip, five AA batteries, 1k resistor, 2k                 resistor, and jumper cables.
+**Details** - My project is comprised of a large wooden base, two 1x4 wood planks, four L brackets, 16 screws, 5 AA battery holder, small breadboard, Elegoo Arduino Uno R3, L298N motor driver, BO gear motor, HC-05 Bluetooth chip, five AA batteries, 1k resistor, 2k                 resistor, and jumper cables.
 
-**Progress 🏁** - So far, I've finished the frame as in the wooden components as well as the 3d printed ones.
+**Progress** - So far, I've finished the frame as in the wooden components as well as the 3d printed ones.
 
-**Challenges 💪** - A couple of challenges I faced durin the assembly of the frame were both during the design and the assembly phases of my project. During the design phase, on my first attempt, I had made the holes where the rods for the gyroscope sit way to shallow so they were prone to slipping out. On my second redesign I had forgotten to account for tolerance, so the two shells didn't end up clamping together correctly. On my third attempt I had the shells printed in a rough filament which didn't allow the rods to spin smoothly so on my final attempt I printed it in a smoother filament.
+**Challenges** - A couple of challenges I faced durin the assembly of the frame were both during the design and the assembly phases of my project. During the design phase, on my first attempt, I had made the holes where the rods for the gyroscope sit way to shallow so they were prone to slipping out. On my second redesign I had forgotten to account for tolerance, so the two shells didn't end up clamping together correctly. On my third attempt I had the shells printed in a rough filament which didn't allow the rods to spin smoothly so on my final attempt I printed it in a smoother filament.
 
-**Next Steps ⏭️** - My plan is to finish up the electronics, then strap it to the frame which will be my second milestone.
+**Next Steps** - My plan is to finish up the electronics, then strap it to the frame which will be my second milestone.
 
 
 
@@ -57,13 +57,13 @@ When you send a rocket full of expensive components you want it to work the firs
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mfC3FOmEetY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Details 🕵️** - For my starter project I decided to make the retro arcade handheld. It requires one pcb, four screws, three AA batteries, 3 AA battery holder, two digital matrix screens, one 3 digit number display, six buttons, one sound module, one power button, and 6 sheets of acrylic.
+**Details** - For my starter project I decided to make the retro arcade handheld. It requires one pcb, four screws, three AA batteries, 3 AA battery holder, two digital matrix screens, one 3 digit number display, six buttons, one sound module, one power button, and 6 sheets of acrylic.
 
-**Progress 🏁** - I've finished my starter milestone which means I need to start making a build plan as well as a parts list so I can actually start on my intensive project.
+**Progress** - I've finished my starter milestone which means I need to start making a build plan as well as a parts list so I can actually start on my intensive project.
 
-**Challenges 💪** - During the soldering of my project, the power button became loose and fell out of it's place meaning that I had solder stuck where it wasn't supposed to be meaning I had to learn how to remove solder which was sort of difficult because it wasn't 100% affective but it got the job done.
+**Challenges** - During the soldering of my project, the power button became loose and fell out of it's place meaning that I had solder stuck where it wasn't supposed to be meaning I had to learn how to remove solder which was sort of difficult because it wasn't 100% affective but it got the job done.
 
-**Next Steps ⏭️** - My next step is to make the build plan as well as the parts list so that I actually start on my summer intensive project.
+**Next Steps** - My next step is to make the build plan as well as the parts list so that I actually start on my summer intensive project.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -476,18 +476,18 @@ if __name__ == '__main__':
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Elagoo Arduino Uno 💻 | Program Motor | $16.99 | <a href="https://amzn.to/4vxjrlB"> Link </a> |
-| L298N Motor Driver 🏎️ | Control Motor | $4.99 | <a href="https://amzn.to/4fnQbYC"> Link </a> |
-| Small Breadboard 🥖 | Allow you to wire up bluetooth controller | $6.99 | <a href="https://amzn.to/4yB9wye"> Link </a> |
-| Hc-05 Bluetooth Module 🛜 | Allow you to control motor through device | $9.99 | <a href="https://amzn.to/44tP0Sm"> Link </a> |
-| Male to Male Jumper Cables 👨 | Wire Circutery | $3.99 | <a href="https://tinyurl.com/4s3233e7"> Link </a> |
-| Male to Female Jumper Cables 👩 | Wire Circutery | $3.99 | <a href="https://tinyurl.com/4kjvuzkk"> Link </a> |
-| 5 AA Battery Holder 🔋 | Provide Power to Circut | $3.95 | <a href="https://tinyurl.com/4funwr9z"> Link </a> |
-| Gear Motor 🚗 | Drive Gears on Gyroscope | $6.89 | <a href="https://tinyurl.com/2p9shaxn"> Link </a> |
-| L Brackets 🏗️ | Hold up Wood Planks | $6.99 | <a href="https://tinyurl.com/47z2rzwa"> Link </a> |
-| Wood Base 🪵 | Secure Entire Project | $21.59 | <a href="https://tinyurl.com/2p9t392b"> Link </a> |
-| Wood Planks 💪 | Hold up Entire Project | $11.99 | <a href="https://tinyurl.com/mtpm7kcm"> Link </a> |
-| AA Batteries 🪫 | Provide Power | $12.49 | <a href="https://tinyurl.com/2p9veynu"> Link </a> |
+| Elagoo Arduino Uno | Program Motor | $16.99 | <a href="https://amzn.to/4vxjrlB"> Link </a> |
+| L298N Motor Driver | Control Motor | $4.99 | <a href="https://amzn.to/4fnQbYC"> Link </a> |
+| Small Breadboard | Allow you to wire up bluetooth controller | $6.99 | <a href="https://amzn.to/4yB9wye"> Link </a> |
+| Hc-05 Bluetooth Module | Allow you to control motor through device | $9.99 | <a href="https://amzn.to/44tP0Sm"> Link </a> |
+| Male to Male Jumper Cables | Wire Circutery | $3.99 | <a href="https://tinyurl.com/4s3233e7"> Link </a> |
+| Male to Female Jumper Cables | Wire Circutery | $3.99 | <a href="https://tinyurl.com/4kjvuzkk"> Link </a> |
+| 5 AA Battery Holder | Provide Power to Circut | $3.95 | <a href="https://tinyurl.com/4funwr9z"> Link </a> |
+| Gear Motor | Drive Gears on Gyroscope | $6.89 | <a href="https://tinyurl.com/2p9shaxn"> Link </a> |
+| L Brackets | Hold up Wood Planks | $6.99 | <a href="https://tinyurl.com/47z2rzwa"> Link </a> |
+| Wood Base | Secure Entire Project | $21.59 | <a href="https://tinyurl.com/2p9t392b"> Link </a> |
+| Wood Planks | Hold up Entire Project | $11.99 | <a href="https://tinyurl.com/mtpm7kcm"> Link </a> |
+| AA Batteries | Provide Power | $12.49 | <a href="https://tinyurl.com/2p9veynu"> Link </a> |
 | **Total** | Total Amount of Money for Project | $106.85 |
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
