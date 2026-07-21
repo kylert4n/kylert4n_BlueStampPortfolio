@@ -197,6 +197,301 @@ void loop() {
 }
 ```
 
+**This was the first attempt at getting the MPU-6050 to relay gyroscope telemetry to my laptop**
+ - I was able to get it to relay it's pitch, roll, and yaw
+ - It's important that it updates quickly because you need real time precise telemtery
+
+```c++
+#include <Wire.h>
+#include <SoftwareSerial.h>
+
+SoftwareSerial BT(2, 3);
+
+const int MPU = 0x68;
+const int MPU_ADDR = 0x68;
+const float ACCEL_SCALE = 16384.0;  // for +/-2g
+const float GYRO_SCALE = 131.0;     // for +/-250 deg/s
+
+float pitch = 0.0;
+float roll = 0.0;
+float yaw = 0.0;
+unsigned long lastTime = 0;
+const float alpha = 0.98; // complementary filter weight
+
+float gyroOffsetX = 0.0;
+float gyroOffsetY = 0.0;
+float gyroOffsetZ = 0.0;
+const int CAL_SAMPLES = 500;
+
+void setup() {
+  Serial.begin(9600);
+  BT.begin(9600);
+  
+  Wire.begin();
+  Serial.begin(9600);
+  BT.begin(9600);
+  Wire.beginTransmission(MPU);
+  Wire.write(0x68);
+  Wire.write(0);
+  Wire.endTransmission(true);
+  delay(100);
+  calibrateGyro();
+  lastTime = millis();
+  
+  Serial.println("MPU-6050 ready");
+}
+
+void loop() {
+  unsigned long currentTime = millis();
+  float dt = (currentTime - lastTime) / 1000.0;
+  if (dt < 0.01) {
+    return;
+  }
+  lastTime = currentTime;
+
+  int16_t ax, ay, az;
+  int16_t gx, gy, gz;
+  readMPU6050(ax, ay, az, gx, gy, gz);
+
+  float accelX = ax / ACCEL_SCALE;
+  float accelY = ay / ACCEL_SCALE;
+  float accelZ = az / ACCEL_SCALE;
+
+  float gyroX = (gx - gyroOffsetX) / GYRO_SCALE;
+  float gyroY = (gy - gyroOffsetY) / GYRO_SCALE;
+  float gyroZ = (gz - gyroOffsetZ) / GYRO_SCALE;
+
+  float rollAcc = atan2(accelY, accelZ) * 180.0 / PI;
+  float pitchAcc = atan2(-accelX, sqrt(accelY * accelY + accelZ * accelZ)) * 180.0 / PI;
+
+  pitch = alpha * (pitch + gyroX * dt) + (1.0 - alpha) * pitchAcc;
+  roll = alpha * (roll + gyroY * dt) + (1.0 - alpha) * rollAcc;
+
+  if (fabs(gyroZ) > 0.5) {
+    yaw += gyroZ * dt;
+  }
+
+  Serial.print("MPU: ");
+  Serial.print(pitch, 2);
+  Serial.print(",");
+  Serial.print(roll, 2);
+  Serial.print(",");
+  Serial.println(yaw, 2);
+}
+
+void calibrateGyro() {
+  long sumX = 0;
+  long sumY = 0;
+  long sumZ = 0;
+  int16_t ax, ay, az;
+  int16_t gx, gy, gz;
+
+  Serial.println("Calibrating gyro, keep the board still...");
+  for (int i = 0; i < CAL_SAMPLES; i++) {
+    readMPU6050(ax, ay, az, gx, gy, gz);
+    sumX += gx;
+    sumY += gy;
+    sumZ += gz;
+    delay(5);
+  }
+
+  gyroOffsetX = sumX / (float)CAL_SAMPLES;
+  gyroOffsetY = sumY / (float)CAL_SAMPLES;
+  gyroOffsetZ = sumZ / (float)CAL_SAMPLES;
+
+  Serial.print("Gyro offsets: ");
+  Serial.print(gyroOffsetX, 2);
+  Serial.print(", ");
+  Serial.print(gyroOffsetY, 2);
+  Serial.print(", ");
+  Serial.println(gyroOffsetZ, 2);
+}
+
+void writeMPU6050(uint8_t reg, uint8_t value) {
+  Wire.beginTransmission(MPU_ADDR);
+  Wire.write(reg);
+  Wire.write(value);
+  Wire.endTransmission();
+}
+
+void readMPU6050(int16_t &ax, int16_t &ay, int16_t &az, int16_t &gx, int16_t &gy, int16_t &gz) {
+  Wire.beginTransmission(MPU_ADDR);
+  Wire.write(0x3B);
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU_ADDR, 14, true);
+
+  ax = Wire.read() << 8 | Wire.read();
+  ay = Wire.read() << 8 | Wire.read();
+  az = Wire.read() << 8 | Wire.read();
+  Wire.read(); Wire.read(); // temperature, ignore
+  gx = Wire.read() << 8 | Wire.read();
+  gy = Wire.read() << 8 | Wire.read();
+  gz = Wire.read() << 8 | Wire.read();
+}
+```
+**This was the second attempt at getting the MPU-6050 to relay telemtery to my laptop
+ - I was able to make a startup sequince to tell weather or not your MPU-6050 was working properly so if you see the startup sequence that        would tell you that you wired it up correctly
+ - Additionally I also added labels for all the numbers like pitch and roll
+ - I also combined this with the original keybinds from before like 'F', 'B', 'S'
+
+```c++
+#include <Wire.h>
+#include <math.h>
+#include <SoftwareSerial.h>
+
+//--------------------------------
+// Bluetooth
+//--------------------------------
+SoftwareSerial BT(2, 3);  // RX, TX
+
+//--------------------------------
+// MPU6040
+//--------------------------------
+const byte MPU = 0x68;
+
+//--------------------------------
+// Motor
+//--------------------------------
+const int IN1 = 8;
+const int IN2 = 7;
+const int ENA = 5;
+
+//--------------------------------
+// Function Prototypes
+//--------------------------------
+void processCommand(char c);
+void readMPU();
+
+void setup()
+{
+    Serial.begin(115200);  // Faster USB serial
+    BT.begin(9600);        // Keep Bluetooth at 9600
+
+    pinMode(IN1, OUTPUT);
+    pinMode(IN2, OUTPUT);
+    pinMode(ENA, OUTPUT);
+
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
+    analogWrite(ENA, 0);
+
+    Wire.begin();
+
+    // Wake MPU6050
+    Wire.beginTransmission(MPU);
+    Wire.write(0x6B);
+    Wire.write(0);
+    byte error = Wire.endTransmission();
+
+    Serial.println();
+    Serial.println("===== SYSTEM START =====");
+
+    if (error == 0)
+      Serial.println("MPU6050 Connected!");
+    else
+    {
+      Serial.print("MPU Error: ");
+      Serial.println(error);
+    }
+
+    Serial.println("Ready for commands:");
+    Serial.println("F = Forwawrd");
+    Serial.println("B = Reverse");
+    Serial.println("S = Stop");
+    Serial.println("========================");
+}
+
+void loop()
+{
+  // USB Serial
+  while (Serial.available())
+  {
+    processCommand(Serial.read());
+  }
+
+  // Read IMU about 100 times/second
+  static unsigned long timer = 0;
+
+  if (millis() - timer > 20)
+  {
+    timer = millis();
+    readMPU();
+  }
+}
+
+void processCommand(char c)
+{
+  if (c == '\n' || c == '\r')
+    return;
+
+  switch (toupper(c))
+  {
+    case 'F':
+      Serial.println("Forward");
+      BT.println("Forward");
+
+      digitalWrite(IN1, HIGH);
+      digitalWrite(IN2, LOW);
+      analogWrite(ENA, 130); // 1-255 speed
+      break;
+
+    case 'B':
+      Serial.println("Reverse");
+      BT.println("Reverse");
+
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, HIGH);
+      analogWrite(ENA, 130);
+      break;
+
+    case 'S':
+      Serial.println("Stop");
+      BT.println("Stop");
+
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, LOW);
+      analogWrite(ENA, 0);
+      break;
+
+    default:
+      Serial.print("Unknown: ");
+      Serial.println(c);
+      break;
+      
+  }
+}
+
+void readMPU()
+{
+  Wire.beginTransmission(MPU);
+  Wire.write(0x3B);
+
+  if (Wire.endTransmission(false) != 0)
+    return;
+
+  if (Wire.requestFrom(MPU, 6, true) != 6)
+    return;
+
+  int16_t ax = Wire.read() << 8 | Wire.read();
+  int16_t ay = Wire.read() << 8 | Wire.read();
+  int16_t az = Wire.read() << 8 | Wire.read();
+
+  float x = ax / 16384.0;
+  float y = ay / 16384.0;
+  float z = az / 16384.0;
+
+  float pitch = atan2(y, sqrt(x*x +z*z)) * 180.0 / PI;
+  float roll = atan2(-x, z) * 180.0 / PI;
+
+  Serial.print("Pitch: ");
+  Serial.print(pitch, 1);
+
+  Serial.print("°  Roll: ");
+  Serial.print(roll, 1);
+
+  Serial.println("°");
+} 
+```
 **This was the first attempt at making a window that displays buttons which will be the main control panel.**
  - This is my first attempt at making a semi-presentable display to control the motor.
  - You can later make your own window.
