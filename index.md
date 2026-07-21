@@ -27,7 +27,7 @@ When you send a rocket full of expensive components you want it to work the firs
 
   # Second Milestone 🐤
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=PKH9MHMPW6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/PKH9MHMPW6M?si=sbrT172EnZBECJ_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 **Details** - My project has different components with their respective voltages, so I had to learn how to make a voltage divider. I also had to learn how to wire things properly and since I had no prior experience this was a little bit challenging.
 
@@ -41,7 +41,7 @@ When you send a rocket full of expensive components you want it to work the firs
 
   # First Milestone 🐣
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=EeG8BlkBPNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/EeG8BlkBPNU?si=uci6YHmYEFvEH1bh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 **Details** - My project is comprised of a large wooden base, two 1x4 wood planks, four L brackets, 16 screws, 5 AA battery holder, small breadboard, Elegoo Arduino Uno R3, L298N motor driver, BO gear motor, HC-05 Bluetooth chip, five AA batteries, 1k resistor, 2k                 resistor, and jumper cables.
 
