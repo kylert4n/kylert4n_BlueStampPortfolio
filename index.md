@@ -329,7 +329,7 @@ void readMPU6050(int16_t &ax, int16_t &ay, int16_t &az, int16_t &gx, int16_t &gy
   gz = Wire.read() << 8 | Wire.read();
 }
 ```
-**This was the second attempt at getting the MPU-6050 to relay telemtery to my laptop
+**This was the second attempt at getting the MPU-6050 to relay telemtery to my laptop**
  - I was able to make a startup sequince to tell weather or not your MPU-6050 was working properly so if you see the startup sequence that        would tell you that you wired it up correctly
  - Additionally I also added labels for all the numbers like pitch and roll
  - I also combined this with the original keybinds from before like 'F', 'B', 'S'
